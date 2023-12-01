@@ -1,0 +1,235 @@
+<html><head>
+    <style>
+        *{
+            background-color: #ebbaa6;
+        }
+      .container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin: 50px;
+      }
+
+      .title {
+        font-size: 80px;
+        font-weight: bold;
+        color: black;
+        text-align: center;
+        margin-bottom: 30px;
+        font-style: italic;
+      }
+
+      .products {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        margin: 10px;
+      }
+
+      .product {
+        width: 150px;
+        height: 200px;
+        margin: 20px;
+        border: 1px solid black;
+        border-radius: 10px;
+        box-shadow: 2px 2px 5px grey;
+        margin-top: 50px;
+        margin-bottom: 100px;
+      }
+
+      .product img {
+        width: 100%;
+        height: 300px;
+        object-fit: cover;
+        border-top-left-radius: 10px;
+        border-top-right-radius: 10px;
+      }
+
+      .product h3 {
+        text-align: center;
+        margin: 5px;
+      }
+
+      .product p {
+        text-align: center;
+        margin: 5px;
+        color: black;
+        /* font-size: ; */
+      }
+
+      .product input {
+        display: block;
+        width: 50px;
+        margin: 0 auto;
+      }
+
+      .summary {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-top:200px;
+        margin-bottom: 100px;
+        font-style: italic;
+        
+        
+        
+      }
+
+      .summary h1 {
+        font-size: 70px;
+        font-weight: bold;
+        color: black;
+      }
+
+      .summary ul {
+        list-style: none;
+        padding: 0;
+      }
+
+      .summary li span {
+        font-weight: bold;
+      }
+
+      .summary p {
+        font-size: 30px;
+        font-weight: bold;
+        color: black;
+      }
+
+      .summary button {
+        width: 100px;
+        height: 60px;
+        border: none;
+        border-radius: 10px;
+        background-color: black;
+        color: white;
+        font-size:20px;
+        font-weight: bold;
+        cursor: pointer;
+      }
+    </style>
+    <title>Task 2</title>
+  </head>
+  <body data-new-gr-c-s-check-loaded="14.1143.0" data-gr-ext-installed="">
+    <div class="container">
+      <div class="title">Build Your Own Chocolate Pack</div>
+      <p>---Use arrows to change the quantities of Chocolates---- </p>
+      <div class="products">
+        <div class="product" data-name="Milk Chocolate" data-price="40">
+          <img src="https://images.unsplash.com/photo-1548907040-4baa42d10919?q=80&amp;w=1936&amp;auto=format&amp;fit=crop&amp;ixlib=rb-4.0.3&amp;ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Milk Chocolate">
+          <h3>Milk Chocolate</h3>
+          <p>₹30</p>
+          <input type="number" min="0" max="8" value="0" onkeydown="return false" onchange="updateSummary()">
+        </div>
+        <div class="product" data-name="Nuts Chocolate" data-price="70">
+          <img src="https://images.unsplash.com/photo-1635491201370-1abd16f0cde0?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTV8fGNob2NvbGF0ZSUyMG51dHxlbnwwfHwwfHx8MA%3D%3D" alt="Nut Chocolate">
+          <h3>Nuts Chocolate</h3>
+          <p>₹50</p>
+          <input type="number" min="0" max="8" value="0" onkeydown="return false" onchange="updateSummary()">
+        </div>
+        <div class="product" data-name="White Chocolate" data-price="60">
+            <img src="https://plus.unsplash.com/premium_photo-1661883148009-34750fe09941?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTN8fG1pbGslMjBjaG9jb2xhdGV8ZW58MHx8MHx8fDA%3D" alt="White Chocolate">
+            <h3>White Chocolate</h3>
+            <p>₹70</p>
+            <input type="number" min="0" max="8" value="0" onkeydown="return false" onchange="updateSummary()">
+          </div>
+        <div class="product" data-name="Dark Chocolate" data-price="50">
+            <img src="https://images.unsplash.com/photo-1623660053975-cf75a8be0908?q=80&w=1887&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Dark Chocolate">
+            <h3>Dark Chocolate</h3>
+            <p>₹100</p>
+            <input type="number" min="0" max="8" value="0" onkeydown="return false" onchange="updateSummary()">
+          </div>
+      </div>
+    </div>
+    <div class="container">
+        <div class="products">
+          <div class="product" data-name="Bittersweet Chocolate" data-price="40">
+            <img src="https://images.unsplash.com/photo-1610450949065-1f2841536c88?q=80&w=387&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Biitersweet Chocolate">
+            <h3>Bittersweet Chocolate</h3>
+            <p>₹30</p>
+            <input type="number" min="0" max="8" value="0" onkeydown="return false" onchange="updateSummary()">
+          </div>
+          <div class="product" data-name="Heart Shaped Chocolate" data-price="70">
+            <img src="https://media.istockphoto.com/id/469723402/photo/heart-shaped-chocolates-background.jpg?s=612x612&w=is&k=20&c=qoy0NQZ4OTCP2R6pQezQ45VjWXgU7uzfMNFH5IXNnyo=" alt="Heart Shaped Chocolate">
+            <h3>Heart Shaped Chocolate</h3>
+            <p>₹50</p>
+            <input type="number" min="0" max="8" value="0" onkeydown="return false" onchange="updateSummary()">
+          </div>
+          <div class="product" data-name="Coffee Chocolate" data-price="60">
+              <img src="https://media.istockphoto.com/id/1036053460/photo/coffe-and-chocolate.jpg?s=612x612&w=is&k=20&c=3Nha1wsh6CHgvTTUJfWVKivgZq-tVzDHTTlY__SzyP0=" alt="Coffee Chocolate">
+              <h3>Coffee Chocolate</h3>
+              <p>₹70</p>
+              <input type="number" min="0" max="8" value="0" onkeydown="return false" onchange="updateSummary()">
+            </div>
+          <div class="product" data-name="Chocolate Balls" data-price="50">
+              <img src="https://images.unsplash.com/photo-1549007994-cb92caebd54b?q=80&w=435&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Chocolate balls">
+              <h3>Chocolate Balls</h3>
+              <p>₹100</p>
+              <input type="number" min="0" max="8" value="0" onkeydown="return false" onchange="updateSummary()">
+            </div>
+        </div>
+      </div>
+    <div class="summary">
+        <h1>Your Custom Pack</h1>
+        <ul id="summary-items">
+        </ul>
+        <p id="summary-total">Total: ₹0</p>
+        <button id="summary-button" onclick="placeOrder()">Place Order</button>
+      </div>
+    <script>
+      const summaryItems = document.getElementById("summary-items");
+      const summaryTotal = document.getElementById("summary-total");
+      const summaryButton = document.getElementById("summary-button");
+      let totalQuant;
+
+      function updateSummary() {
+        
+        const products = document.getElementsByClassName("product");
+
+        let items = 0;
+        let total = 0;
+
+        for (let product of products) {
+          let name = product.dataset.name;
+          let price = parseInt(product.dataset.price);
+          let quantity = parseInt(product.querySelector("input").value);
+
+          items += quantity;
+          total += price * quantity;
+        }
+        totalQuant = items;
+        if(totalQuant > 8){
+            alert("The total number of items in the custom pack should not exceed 8")
+            return;
+        }
+        summaryItems.innerHTML = "";
+
+        for (let product of products) {
+          let name = product.dataset.name;
+          let quantity = parseInt(product.querySelector("input").value);
+
+          if (quantity > 0) {
+            let summaryItem = document.createElement("li");
+
+            summaryItem.innerHTML = `<span>${name}</span> x ${quantity}`;
+
+            summaryItems.appendChild(summaryItem);
+          }
+        }
+
+        summaryTotal.innerHTML = `Total: ₹${total}`;
+
+        if (items == 8) {
+          summaryButton.disabled = false;
+        } else {
+          summaryButton.disabled = true;
+        }
+      }
+
+      function placeOrder() {
+        alert("Your order has been placed successfully!");
+      }
+    </script>
+  
+
+</body><grammarly-desktop-integration data-grammarly-shadow-root="true"></grammarly-desktop-integration></html>
